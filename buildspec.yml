@@ -9,8 +9,8 @@ env:
 phases:
   pre_build:
     commands:
-      - echo rogue ${SECILL}
-      - echo test - $SECILL
+      #- echo rogue ${SECILL}
+      - echo test 
       - aws --version
 
   build:
