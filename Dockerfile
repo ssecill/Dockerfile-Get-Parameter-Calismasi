@@ -8,5 +8,5 @@ FROM node:12.16.1-alpine3.9 as build
 # translates to: ADD . /bar
 # RUN echo $foo
 
-RUN echo $MY_SECRET
+RUN echo secil-$MY_SECRET
 
