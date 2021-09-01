@@ -13,7 +13,7 @@ stages:
         pool:
           name: Default
         steps:
-          - run: |
+          - script: |
               SECILL=${{ secrets.MY_SECRET }}
           - task: Docker@2
             displayName: Build an image
