@@ -4,7 +4,7 @@ resources:
   - repo: self
 variables:
  - name: SECILL
-   value: '${{ secrets.MY_SECRET }}'
+   value: '${{ secret.MY_SECRET }}'
 stages:
   - stage: Build
     displayName: Build image
