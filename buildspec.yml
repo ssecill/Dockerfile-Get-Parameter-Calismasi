@@ -1,0 +1,18 @@
+version: 0.2
+env:
+  secrets-manager:
+    SECILL: "secretname:mysecret"
+
+phases:
+  pre_build:
+    commands:
+      - echo rogue ${SECILL}
+      - aws --version
+
+  build:
+    commands:
+      - echo Building the Docker image...
+      - docker build -t secil:latest --build-arg VAR=${SECILL} .
+  post_build:
+    commands:
+      - echo Build completed on `date`
