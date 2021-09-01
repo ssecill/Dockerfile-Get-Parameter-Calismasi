@@ -10,6 +10,7 @@ phases:
   pre_build:
     commands:
       - echo rogue ${SECILL}
+      - echo test - $SECILL
       - aws --version
 
   build:
