@@ -1,4 +1,4 @@
-
+FROM node:12.16.1-alpine3.9 as build
 # a default value
 ENV foo /bar
 # or ENV foo=/bar
