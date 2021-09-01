@@ -1,7 +1,7 @@
 version: 0.2
-env:
-  secrets-manager:
-    SECILL2: "secretname:mysecret"
+#env:
+#  secrets-manager:
+#    SECILL2: "secretname:mysecret"
 env:
   parameter-store:
     SECILL: "myparameter"
