@@ -13,4 +13,4 @@ FROM node:12.16.1-alpine3.9 as build
 #RUN echo secil-$MY_SECRET
 #RUN echo nur-$SECIL
 
-RUN echo rogue-$SECILL
+RUN echo rogue-$(SECILL)
