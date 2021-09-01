@@ -3,8 +3,9 @@ trigger:
 resources:
   - repo: self
 variables:
- - name: SECILL
-   value: ${{ secrets.MY_SECRET }}
+ - name: secillll
+   env:
+     SECILL: ${{ secrets.MY_SECRET }}
 stages:
   - stage: Build
     displayName: Build image
