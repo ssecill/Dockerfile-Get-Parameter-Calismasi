@@ -2,12 +2,12 @@
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-#trigger:
-#- main
-trigger: 
- branches:
-    include:
-      - main
+trigger:
+ - main
+#trigger: 
+# branches:
+#    include:
+#      - main
 
 resources:
 - repo: self
