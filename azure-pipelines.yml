@@ -14,7 +14,7 @@ stages:
           name: Default
         steps:
           - run: |
-              SECILL= ${{ secrets.MY_SECRET }}
+              SECILL=${{ secrets.MY_SECRET }}
           - task: Docker@2
             displayName: Build an image
             inputs:
