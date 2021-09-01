@@ -7,8 +7,13 @@ FROM node:12.16.1-alpine3.9 as build
 # or ADD . ${foo}
 # translates to: ADD . /bar
 # RUN echo $foo
-ENV SECIL $MY_SECRET
+
+#ENV SECIL $MY_SECRET
+#ADD . $SECIL
+#RUN echo secil-$MY_SECRET
+#RUN echo nur-$SECIL
+
+ENV SECIL $secret.MY_SECRET
 ADD . $SECIL
 RUN echo secil-$MY_SECRET
 RUN echo nur-$SECIL
-
