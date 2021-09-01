@@ -2,10 +2,6 @@ trigger:
   - main
 resources:
   - repo: self
-variables:
- - name: secillll
-   env:
-     SECILL: ${{ secrets.MY_SECRET }}
 stages:
   - stage: Build
     displayName: Build image
