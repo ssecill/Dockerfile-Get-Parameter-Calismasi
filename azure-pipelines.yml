@@ -3,7 +3,8 @@ trigger:
 resources:
   - repo: self
 variables:
-  tag: $(Build.BuildId)
+ - name: SECILL
+   value: '${{ secrets.MY_SECRET }}'
 stages:
   - stage: Build
     displayName: Build image
@@ -13,9 +14,6 @@ stages:
         pool:
           name: Default
         steps:
-          - name: secil
-            env: 
-              SECILL: '${{ secrets.MY_SECRET }}'
           - task: Docker@2
             displayName: Build an image
             inputs:
