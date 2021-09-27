@@ -2,9 +2,9 @@ version: 0.2
 #env:
 #  secrets-manager:
 #    SECILL2: "secretname:mysecret"
-env:
-  parameter-store:
-    SECILL: "myparameter"
+#env:
+#  parameter-store:
+#    SECILL: "myparameter"
 
 phases:
   pre_build:
@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Building the Docker image...
       #- docker build -t secil:latest --build-arg VAR=${SECILL} .
-      - docker build -t secil:latest --build-arg VAR=${VAR} .
+      - docker build -t secil:latest .
   post_build:
     commands:
       - echo Build completed on `date`
