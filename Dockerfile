@@ -11,7 +11,7 @@ FROM node:12.16.1-alpine3.9 as build
 #ENV SECIL $MY_SECRET
 #ADD . $SECIL
 #RUN echo secil-$MY_SECRET
-#RUN echo nur-$SECIL
+#RUN echo $SECIL
 
 ARG VAR=TEST
 RUN echo rogue-$VAR
